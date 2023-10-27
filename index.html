@@ -1,0 +1,149 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title> Kalith - portfolio </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header{
+            background-color: rgb(96, 5, 5);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative; /*add this*/
+        }
+        .header-content h1{
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: rgb(96, 5, 5);
+            color: white;
+            text-align: center;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 20px;
+        }
+        nav ul li{
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .section-content{
+            background-color: white;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgb(96, 5, 5);
+        }
+        .download-button{
+            background-color: aqua;
+            color: black;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .download-button:hover{
+            background-color: blue;
+        }
+        footer{
+            text-align: center;
+            padding: 1rem 0;
+            background-color: rgb(157, 183, 233);
+            background-image: kalith.jpg;
+            color: black;
+        }
+        ul {
+            list-style-type: lower-roman;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1> Kalith S</h1>
+                <p> Born To Live </p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="About">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p> Hello Everyone! This is Kalith Mujayudeen.. I am BCA student</p>
+        </div>
+    </section>
+
+    <section id="Education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>St John's College </p>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Ethical Hacking</li>
+                <li>Backend Developer</li>
+                <li>Cyber Security</li>
+                <li>Photoshop</li>
+                <li>Jammer</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="Projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; 2023 KALITH </p>
+    </footer>
+
+    <script>
+        // smooth scrolling
+        document.querySelectorAll('a[href^="about"]').forEach(anchor => {
+            anchor.addEventListener('click',function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement){
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+                 
+        })
+    </script>
+</body>
+</html>
